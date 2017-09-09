@@ -12,7 +12,7 @@ import cv2
 cap = cv2.VideoCapture("sample.mp4")
 
 counter = 0
-
+tinpo = 0
 while(cap.isOpened()):
     ret, frame = cap.read()
 
@@ -20,10 +20,10 @@ while(cap.isOpened()):
         counter = counter + 1
         if counter % 60 == 0:
           gray2 = cv2.cvtColor(frame, 1)
-
+          tinpo = tinpo + 1
           # 変換するとカラー情報が落ちるので、一度ファイルに保存して開き直す
-          cv2.imwrite('./room/gray{}.png'.format(counter), gray2)
-          gray = cv2.imread('./room/gray{}.png'.format(counter))
+          cv2.imwrite('./room/16/gray{}.png'.format(tinpo), gray2)
+          gray = cv2.imread('./room/16/gray{}.png'.format(tinpo))
 
           print(frame.shape)
           print(gray2.shape)
