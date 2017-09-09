@@ -18,16 +18,16 @@ while(cap.isOpened()):
 
     if ret == True :
         counter = counter + 1
-        gray2 = cv2.cvtColor(frame, 1)
+        if counter % 60 == 0:
+          gray2 = cv2.cvtColor(frame, 1)
 
-        # 変換するとカラー情報が落ちるので、一度ファイルに保存して開き直す
-        cv2.imwrite('./gray{}.png'.format(counter), gray2)
-        gray = cv2.imread('./gray{}.png'.format(counter))
+          # 変換するとカラー情報が落ちるので、一度ファイルに保存して開き直す
+          cv2.imwrite('./room/gray{}.png'.format(counter), gray2)
+          gray = cv2.imread('./room/gray{}.png'.format(counter))
 
-        print(frame.shape)
-        print(gray2.shape)
-        print(gray.shape)
-
+          print(frame.shape)
+          print(gray2.shape)
+          print(gray.shape)
     if ret == False and counter != 0 :
         break
 
