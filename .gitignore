@@ -1,4 +1,5 @@
 *.swp
 *.swo
 /datasets/*
-/room/*
+/data/*
+/result/*

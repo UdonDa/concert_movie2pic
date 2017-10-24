@@ -4,7 +4,7 @@ import cv2
 from numpy.random import *
 
 # 入力する動画パスを指定
-cap = cv2.VideoCapture("sample.mp4")
+cap = cv2.VideoCapture("./data/sample.mp4")
 
 counter = 0
 dataset_counter = 0
