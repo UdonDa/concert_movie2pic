@@ -4,9 +4,10 @@ import shutil
 import cv2
 
 def video_2_frame():
-  video_file="./data/data.mp4" 
-  image_dir="./image_dir/"
-  image_file="img_%s.png"
+  name = "wally"
+  video_file="./data/"+ name+"/data.mp4" 
+  image_dir="./image_dir/"+name+"/"
+  image_file=name + "%s.png"
 
   #if os.path.exits(image_dir):
     #shutil.rmtree(image_dir)
